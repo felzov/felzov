@@ -1,16 +1,57 @@
-## Hi there 👋
+# Hi, I’m Max 👋
 
-<!--
-**felzov/felzov** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**Aspiring software engineer building Python projects with APIs, SQL, and backend systems.**
 
-Here are some ideas to get you started:
+Computing student based in London, currently focused on backend development, practical portfolio projects, and software engineering internships.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## About me
+
+- Studying Computing and building backend-focused projects outside university
+- Interested in Python, API development, databases, automation, and backend systems
+- Currently improving FastAPI, PostgreSQL, SQL, Docker, and software engineering skills
+- Building practical projects designed to be strong enough for GitHub, CVs, and internship applications
+
+---
+
+## Tech stack
+
+![Python](https://img.shields.io/badge/Python-111827?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-111827?style=for-the-badge&logo=fastapi&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-111827?style=for-the-badge&logo=postgresql&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-111827?style=for-the-badge&logo=sqlalchemy&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-111827?style=for-the-badge&logo=docker&logoColor=white)
+![Git](https://img.shields.io/badge/Git-111827?style=for-the-badge&logo=git&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-111827?style=for-the-badge&logo=linux&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS%20Code-111827?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+
+---
+
+## Featured projects
+
+I’m building a backend-focused portfolio around Python, APIs, SQL, and data workflows.
+
+### `expense-tracker-api`
+FastAPI + PostgreSQL backend for tracking transactions, categories, and monthly spending analytics.
+
+### `spending-analytics-pipeline`
+Python pipeline for ingesting, cleaning, storing, and analysing transaction data with SQL.
+
+### `job-application-tracker-api`
+Backend API for tracking job applications, statuses, follow-ups, and simple analytics.
+
+---
+
+## Current focus
+
+- Building strong backend portfolio projects for internship applications
+- Improving API design, database modelling, and SQL/PostgreSQL skills
+- Preparing for software engineering internships in London
+
+---
+
+## Connect
+
+- LinkedIn: **add your LinkedIn here**
+- Email: **add your email here**
