@@ -17,14 +17,7 @@ Computing student based in London, currently focused on backend development, pra
 
 ## Tech stack
 
-![Python]([![My Skills](https://skillicons.dev/icons?i=js,html,css,wasm)](https://skillicons.dev))
-![FastAPI](https://img.shields.io/badge/FastAPI-111827?style=for-the-badge&logo=fastapi&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-111827?style=for-the-badge&logo=postgresql&logoColor=white)
-![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-111827?style=for-the-badge&logo=sqlalchemy&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-111827?style=for-the-badge&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-111827?style=for-the-badge&logo=git&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-111827?style=for-the-badge&logo=linux&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS%20Code-111827?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+[![My Skills](https://skillicons.dev/icons?i=html,css,py,fastapi,postgres,docker,git,linux,vscode,pycharm)](https://skillicons.dev))
 
 ---
 
