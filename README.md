@@ -53,5 +53,5 @@ Backend API for tracking job applications, statuses, follow-ups, and simple anal
 
 ## Connect
 
-- LinkedIn: **add your LinkedIn here**
-- Email: **add your email here**
+- LinkedIn: https://www.linkedin.com/in/maksym-krainii-148890341/
+- Email: krainiy10@gmail.com
