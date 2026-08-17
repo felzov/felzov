@@ -17,7 +17,7 @@ Computing student based in London, currently focused on backend development, pra
 
 ## Tech stack
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,py,fastapi,postgres,docker,redis,git,linux,vscode,pycharm)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,py,fastapi,postgres,docker,redis,git,linux,)](https://skillicons.dev)
 
 ---
 
