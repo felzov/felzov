@@ -1,49 +1,94 @@
-# Hi, I’m Max 👋
+# Hi, I'm Max 👋
 
-**Aspiring software engineer building Python projects with APIs, SQL, and backend systems.**
+### Aspiring Software Engineer | Python | Backend | SQL
 
-Computing student based in London, currently focused on backend development, practical portfolio projects, and software engineering internships.
+I'm a Computing student based in London, focused on building backend systems with Python, APIs, databases, and modern software engineering practices.
+
+Currently building production-style portfolio projects while preparing for software engineering internships.
 
 ---
 
 ## About me
 
-- Studying Computing and building backend-focused projects outside university
-- Interested in Python, API development, databases, automation, and backend systems
-- Currently improving FastAPI, PostgreSQL, SQL, Docker, and software engineering skills
-- Building practical projects designed to be strong enough for GitHub, CVs, and internship applications
+- Computing student focused on software engineering and backend development
+- Building practical projects with Python, FastAPI, PostgreSQL, Docker, and SQL
+- Interested in backend architecture, databases, APIs, distributed systems, and data processing
+- Learning through building, testing, reviewing, and improving real software
+- Currently preparing for software engineering internships in London
 
 ---
 
 ## Tech stack
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,py,fastapi,postgres,docker,redis,git,linux,)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=python,fastapi,postgres,docker,redis,git,github,linux)](https://skillicons.dev)
+
+**Languages & Frameworks**
+- Python
+- FastAPI
+- SQL
+
+**Databases & Infrastructure**
+- PostgreSQL
+- Redis
+- Docker / Docker Compose
+
+**Tools**
+- Git
+- GitHub
+- Linux
+- pytest
+- Alembic
+- SQLAlchemy
 
 ---
 
-## Featured projects
+## Featured project
 
-I’m building a backend-focused portfolio around Python, APIs, SQL, and data workflows.
+### 🏦 [banking-ledger-api](https://github.com/felzov/banking-ledger-api)
 
-### `expense-tracker-api`
-FastAPI + PostgreSQL backend for tracking transactions, categories, and monthly spending analytics.
+Production-style banking backend built with Python and FastAPI.
 
-### `spending-analytics-pipeline`
-Python pipeline for ingesting, cleaning, storing, and analysing transaction data with SQL.
+The project focuses on the engineering challenges behind financial systems rather than simple CRUD:
 
-### `job-application-tracker-api`
-Backend API for tracking job applications, statuses, follow-ups, and simple analytics.
+- Double-entry ledger architecture
+- PostgreSQL database design
+- ACID transactions
+- Transaction integrity and consistency
+- Idempotency
+- Concurrency and race conditions
+- Database locking
+- Audit logging
+- API design
+- Automated testing
+- Dockerized development environment
+- CI/CD
+
+**Stack:** Python · FastAPI · PostgreSQL · SQLAlchemy · Alembic · Docker · pytest
 
 ---
 
-## Current focus
+## Currently learning
 
-- Building strong backend portfolio projects for internship applications
-- Improving API design, database modelling, and SQL/PostgreSQL skills
-- Preparing for software engineering internships in London
+- Backend architecture
+- Database design and SQL
+- FastAPI and async Python
+- PostgreSQL and transaction management
+- Testing and TDD
+- Distributed systems fundamentals
+- Data pipelines and processing
+- Docker and CI/CD
+- Software engineering best practices
+
+---
+
+## Goals
+
+I'm currently building a portfolio of backend projects to develop the practical skills required for software engineering internships.
+
+My focus is on understanding not only how to build software, but also why systems are designed the way they are — from database transactions and API boundaries to testing, reliability, security, and scalability.
 
 ---
 
 ## Connect
 
-- LinkedIn: [linkedin.com/in/maksym-krainii-148890341/](https://linkedin.com/in/maksym-krainii-148890341/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Maksym_Krainii-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/maksym-krainii-148890341/)
