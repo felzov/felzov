@@ -1,94 +1,68 @@
-# Hi, I'm Max 👋
+# Hi, I'm Max
 
-### Aspiring Software Engineer | Python | Backend | SQL
+**Computing student · Backend engineering · Python & PostgreSQL**
 
-I'm a Computing student based in London, focused on building backend systems with Python, APIs, databases, and modern software engineering practices.
+I'm a Computing student in London who likes understanding how systems behave when things go wrong — two requests hitting the same account at once, a retry that runs twice, a migration that half-applies. Most of my time goes into building backend projects that deal with exactly those problems, and into making sure I can explain every decision in them.
 
-Currently building production-style portfolio projects while preparing for software engineering internships.
-
----
-
-## About me
-
-- Computing student focused on software engineering and backend development
-- Building practical projects with Python, FastAPI, PostgreSQL, Docker, and SQL
-- Interested in backend architecture, databases, APIs, distributed systems, and data processing
-- Learning through building, testing, reviewing, and improving real software
-- Currently preparing for software engineering internships in London
+I'm looking for a **Software Engineering internship** where I can work on real backend systems with people who care about getting the details right.
 
 ---
 
-## Tech stack
+## What I'm working on
 
-[![My Skills](https://skillicons.dev/icons?i=python,fastapi,postgres,docker,redis,git,github,linux)](https://skillicons.dev)
+### 🏦 [Banking Ledger API](https://github.com/felzov/banking-ledger-api)
 
-**Languages & Frameworks**
-- Python
-- FastAPI
-- SQL
+A banking backend built around a double-entry ledger. The interesting part isn't the endpoints — it's keeping money correct:
 
-**Databases & Infrastructure**
-- PostgreSQL
-- Redis
-- Docker / Docker Compose
+- **Double-entry bookkeeping** — every transfer produces balanced ledger entries, so balances can always be reconstructed and checked
+- **Atomic transfers** — PostgreSQL transactions ensure a transfer either fully happens or doesn't happen at all
+- **Concurrency safety** — row-level locking to prevent race conditions when the same account is debited in parallel
+- **Idempotency keys** — a retried request doesn't move money twice
+- **Audit trail** — a record of what changed and why
+- **Tests for failure paths**, not just the happy path
 
-**Tools**
-- Git
-- GitHub
-- Linux
-- pytest
-- Alembic
-- SQLAlchemy
+`Python` · `FastAPI` · `PostgreSQL` · `SQLAlchemy 2.0` · `Alembic` · `pytest` · `Docker` · `GitHub Actions`
+
+### 📊 [Banking Transaction Analytics](https://github.com/felzov/banking-transaction-analytics)
+
+Imports, validates and analyses bank-statement CSVs. Real exports are messy, so the focus is on handling bad input safely:
+
+- **Exact money** — amounts stored as integer minor units, never floats
+- **Row-level validation errors** — one bad row is reported clearly instead of failing the whole import
+- **Parsing and normalisation** of inconsistent CSV formats into a clean PostgreSQL schema
+- **Analytics API** for filtering and summarising transactions
+
+`Python` · `FastAPI` · `PostgreSQL`
 
 ---
 
-## Featured project
+## Tech I use
 
-### 🏦 [banking-ledger-api](https://github.com/felzov/banking-ledger-api)
+[![Skills](https://skillicons.dev/icons?i=python,fastapi,postgres,redis,docker,git,github,linux)](https://skillicons.dev)
 
-Production-style banking backend built with Python and FastAPI.
+- **Backend:** Python, FastAPI, Pydantic, async Python, REST API design
+- **Data:** PostgreSQL, SQL, SQLAlchemy 2.0, Alembic, Redis
+- **Testing & quality:** pytest, pytest-asyncio, Ruff
+- **Infrastructure:** Docker, Docker Compose, GitHub Actions, Linux
 
-The project focuses on the engineering challenges behind financial systems rather than simple CRUD:
+---
 
-- Double-entry ledger architecture
-- PostgreSQL database design
-- ACID transactions
-- Transaction integrity and consistency
-- Idempotency
-- Concurrency and race conditions
-- Database locking
-- Audit logging
-- API design
-- Automated testing
-- Dockerized development environment
-- CI/CD
+## How I like to work
 
-**Stack:** Python · FastAPI · PostgreSQL · SQLAlchemy · Alembic · Docker · pytest
+- **Correctness first.** I'd rather ship a smaller feature that handles failure properly than a bigger one that doesn't.
+- **Tests that mean something.** Especially for the cases that are easy to forget: duplicates, timeouts, concurrent writes.
+- **Understanding over output.** I use AI tools to move faster, but I don't keep code I can't explain.
 
 ---
 
 ## Currently learning
 
-- Backend architecture
-- Database design and SQL
-- FastAPI and async Python
-- PostgreSQL and transaction management
-- Testing and TDD
-- Distributed systems fundamentals
-- Data pipelines and processing
-- Docker and CI/CD
-- Software engineering best practices
+Distributed systems fundamentals · message queues and event streaming · database internals and query performance · observability
 
 ---
 
-## Goals
-
-I'm currently building a portfolio of backend projects to develop the practical skills required for software engineering internships.
-
-My focus is on understanding not only how to build software, but also why systems are designed the way they are — from database transactions and API boundaries to testing, reliability, security, and scalability.
-
----
-
-## Connect
+## Get in touch
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Maksym_Krainii-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/maksym-krainii-148890341/)
+
+Happy to chat about backend engineering, internships, or anything in my repos.
