@@ -8,31 +8,41 @@ I'm looking for a **Software Engineering internship** where I can work on real b
 
 ---
 
-## What I'm working on
+## Projects
+
+The two projects below work together: the analytics service can take its transactions straight from the ledger API, checking every entry against the ledger's running balance before storing anything.
 
 ### 🏦 [Banking Ledger API](https://github.com/felzov/banking-ledger-api)
 
 A banking backend built around a double-entry ledger. The interesting part isn't the endpoints — it's keeping money correct:
 
-- **Double-entry bookkeeping** — every transfer produces balanced ledger entries, so balances can always be reconstructed and checked
-- **Atomic transfers** — PostgreSQL transactions ensure a transfer either fully happens or doesn't happen at all
-- **Concurrency safety** — row-level locking to prevent race conditions when the same account is debited in parallel
-- **Idempotency keys** — a retried request doesn't move money twice
-- **Audit trail** — a record of what changed and why
-- **Tests for failure paths**, not just the happy path
+- **Double-entry bookkeeping** — every posting produces balanced ledger entries, so balances can always be reconstructed and checked
+- **Atomic transfers** — a transfer either fully happens or doesn't happen at all
+- **Concurrency safety** — accounts are locked in a fixed order (`SELECT … FOR UPDATE`), so parallel transfers can't deadlock each other; deadlocks and serialization failures are retried
+- **Idempotency keys** — a retried request never moves money twice, even when the outcome of a `COMMIT` is unknown
+- **Append-only audit trail** — every attempt is recorded, successful or not
+- **Authentication and ownership** — Argon2id password login, short-lived bearer tokens, and least-privilege database roles
+- **Tests for failure paths** — database outages answer `503`, and cancelled requests are tested to leave the ledger consistent
+
+_Status: final phase in progress — rate limiting and structured logging still to come._
 
 `Python` · `FastAPI` · `PostgreSQL` · `SQLAlchemy 2.0` · `Alembic` · `pytest` · `Docker` · `GitHub Actions`
 
 ### 📊 [Banking Transaction Analytics](https://github.com/felzov/banking-transaction-analytics)
 
-Imports, validates and analyses bank-statement CSVs. Real exports are messy, so the focus is on handling bad input safely:
+Imports, validates and analyses bank statements, from CSV uploads or from the ledger API. Real data is messy, so the focus is on handling bad input safely:
 
-- **Exact money** — amounts stored as integer minor units, never floats
-- **Row-level validation errors** — one bad row is reported clearly instead of failing the whole import
-- **Parsing and normalisation** of inconsistent CSV formats into a clean PostgreSQL schema
-- **Analytics API** for filtering and summarising transactions
+- **Exact money** — amounts stored as integer minor units, never floats, never rounded
+- **Row-level validation errors** — one bad row is reported clearly instead of failing the whole import, and errors never echo personal financial data
+- **Safe re-imports** — rows an account already holds are skipped and counted, enforced by a unique constraint in PostgreSQL
+- **Per-currency analytics** — inflow, outflow and net per currency and month; different currencies are never added together
+- **Ownership everywhere** — hashed API tokens, and every query scoped to its owner
+- **Ready to run on a server** — readiness probe, per-client rate limiting, database timeouts, and 10 architecture decision records explaining the trade-offs
+- **850+ tests**, including integration tests against a real PostgreSQL in CI
 
-`Python` · `FastAPI` · `PostgreSQL`
+_Status: complete — all eight planned phases built._
+
+`Python` · `FastAPI` · `PostgreSQL` · `SQLAlchemy 2.0 (async)` · `Alembic` · `pytest` · `GitHub Actions`
 
 ---
 
