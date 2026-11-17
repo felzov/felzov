@@ -1,78 +1,36 @@
-# Hi, I'm Max
+# Hi, I'm Max 👋
 
-**Computing student · Backend engineering · Python & PostgreSQL**
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1200&color=58A6FF&vCenter=true&width=640&lines=Backend+engineering+%C2%B7+Python+%26+PostgreSQL;One+hand+builds+it+%C2%B7+the+other+breaks+it;Idempotency+%C2%B7+retries+%C2%B7+failure+paths)](https://github.com/felzov)
 
-I'm a Computing student in London who likes understanding how systems behave when things go wrong — two requests hitting the same account at once, a retry that runs twice, a migration that half-applies. Most of my time goes into building backend projects that deal with exactly those problems, and into making sure I can explain every decision in them.
+I'm Max, a Computing student in London. I build backend projects in Python and PostgreSQL,
+mostly around money: ledgers, transfers and bank statements, where a small bug means a wrong
+balance.
 
-I'm looking for a **Software Engineering internship** where I can work on real backend systems with people who care about getting the details right.
+I'm ambidextrous, and I code the same way: one hand builds the system, the other tries to break
+it. Every project I make comes with a page on how it fails, and a test for each way.
 
----
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Maksym_Krainii-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/maksym-krainii-148890341/)
 
-## Projects
+## 🛠️ Tech stack
 
-The two projects below work together: the analytics service can take its transactions straight from the ledger API, checking every entry against the ledger's running balance before storing anything.
+[![Stack](https://skillicons.dev/icons?i=python,fastapi,postgres,redis,rabbitmq,docker,githubactions,linux,git)](https://skillicons.dev)
 
-### 🏦 [Banking Ledger API](https://github.com/felzov/banking-ledger-api)
+**Python** · FastAPI · Pydantic · asyncio · **PostgreSQL** · SQLAlchemy 2.0 · Alembic · Redis ·
+RabbitMQ · pytest · Hypothesis · Docker Compose · GitHub Actions · Linux
 
-A banking backend built around a double-entry ledger. The interesting part isn't the endpoints — it's keeping money correct:
+## 🚀 Featured projects
 
-- **Double-entry bookkeeping** — every posting produces balanced ledger entries, so balances can always be reconstructed and checked
-- **Atomic transfers** — a transfer either fully happens or doesn't happen at all
-- **Concurrency safety** — accounts are locked in a fixed order (`SELECT … FOR UPDATE`), so parallel transfers can't deadlock each other; deadlocks and serialization failures are retried
-- **Idempotency keys** — a retried request never moves money twice, even when the outcome of a `COMMIT` is unknown
-- **Append-only audit trail** — every attempt is recorded, successful or not
-- **Authentication and ownership** — Argon2id password login, short-lived bearer tokens, and least-privilege database roles
-- **Tests for failure paths** — database outages answer `503`, and cancelled requests are tested to leave the ledger consistent
+| Project | The hard part it solves |
+|---|---|
+| 🏦 [**banking-ledger-api**](https://github.com/felzov/banking-ledger-api) | A double-entry ledger where PostgreSQL enforces the rules: postings balance to zero or change nothing, parallel transfers neither deadlock nor overdraw, and a retried request never moves money twice |
+| 📊 [**banking-transaction-analytics**](https://github.com/felzov/banking-transaction-analytics) | Imports messy bank statements from CSV or from the ledger: row-level errors that never leak personal data, safe re-imports, exact per-currency totals. 850+ tests |
+| ⚙️ [**distributed-task-platform**](https://github.com/felzov/distributed-task-platform) | Background jobs through RabbitMQ with explicit failure behaviour: bounded retries with backoff, crashed-worker recovery, dead letters, and a test for each failure path |
 
-_Status: final phase in progress — rate limiting and structured logging still to come._
+## 💡 How I work
 
-`Python` · `FastAPI` · `PostgreSQL` · `SQLAlchemy 2.0` · `Alembic` · `pytest` · `Docker` · `GitHub Actions`
+- **Correctness first.** A smaller feature that handles failure beats a bigger one that doesn't.
+- **Tests that mean something:** duplicates, timeouts, concurrent writes, crashes.
+- **Understanding over output.** I use AI tools to move faster, but I don't keep code I can't
+  explain.
 
-### 📊 [Banking Transaction Analytics](https://github.com/felzov/banking-transaction-analytics)
-
-Imports, validates and analyses bank statements, from CSV uploads or from the ledger API. Real data is messy, so the focus is on handling bad input safely:
-
-- **Exact money** — amounts stored as integer minor units, never floats, never rounded
-- **Row-level validation errors** — one bad row is reported clearly instead of failing the whole import, and errors never echo personal financial data
-- **Safe re-imports** — rows an account already holds are skipped and counted, enforced by a unique constraint in PostgreSQL
-- **Per-currency analytics** — inflow, outflow and net per currency and month; different currencies are never added together
-- **Ownership everywhere** — hashed API tokens, and every query scoped to its owner
-- **Ready to run on a server** — readiness probe, per-client rate limiting, database timeouts, and 10 architecture decision records explaining the trade-offs
-- **850+ tests**, including integration tests against a real PostgreSQL in CI
-
-_Status: complete — all eight planned phases built._
-
-`Python` · `FastAPI` · `PostgreSQL` · `SQLAlchemy 2.0 (async)` · `Alembic` · `pytest` · `GitHub Actions`
-
----
-
-## Tech I use
-
-[![Skills](https://skillicons.dev/icons?i=python,fastapi,postgres,redis,docker,git,github,linux)](https://skillicons.dev)
-
-- **Backend:** Python, FastAPI, Pydantic, async Python, REST API design
-- **Data:** PostgreSQL, SQL, SQLAlchemy 2.0, Alembic, Redis
-- **Testing & quality:** pytest, pytest-asyncio, Ruff
-- **Infrastructure:** Docker, Docker Compose, GitHub Actions, Linux
-
----
-
-## How I like to work
-
-- **Correctness first.** I'd rather ship a smaller feature that handles failure properly than a bigger one that doesn't.
-- **Tests that mean something.** Especially for the cases that are easy to forget: duplicates, timeouts, concurrent writes.
-- **Understanding over output.** I use AI tools to move faster, but I don't keep code I can't explain.
-
----
-
-## Currently learning
-
-Distributed systems fundamentals · message queues and event streaming · database internals and query performance · observability
-
----
-
-## Get in touch
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Maksym_Krainii-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/maksym-krainii-148890341/)
-
-Happy to chat about backend engineering, internships, or anything in my repos.
+**Currently learning:** distributed systems · event streaming · database internals · observability
