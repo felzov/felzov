@@ -1,6 +1,6 @@
 # Hi, I'm Max 👋
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1200&color=58A6FF&vCenter=true&width=640&lines=Backend+engineering+%C2%B7+Python+%26+PostgreSQL;One+hand+builds+it+%C2%B7+the+other+breaks+it;Idempotency+%C2%B7+retries+%C2%B7+failure+paths)](https://github.com/felzov)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1200&color=58A6FF&vCenter=true&width=640&lines=Backend+engineering+%C2%B7+Python+%26+PostgreSQL;One+hand+builds+it+%C2%B7+the+other+breaks+it;What+stands+in+the+way+becomes+the+way)](https://github.com/felzov)
 
 I'm Max, a Computing student in London. I build backend projects in Python and PostgreSQL,
 mostly around money: ledgers, transfers and bank statements, where a small bug means a wrong
